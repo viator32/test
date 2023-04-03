@@ -1,0 +1,8 @@
+mail.transport.protocol=smtp
+mail.smtp.port=465
+mail.smtp.auth=true
+mail.smtp.ssl.enable=true
+from=hallowelt@gmx.de
+user=hallowelt@gmx.de
+mail.smtp.host=smtp.gmx.de
+password=K[O8a}5#
