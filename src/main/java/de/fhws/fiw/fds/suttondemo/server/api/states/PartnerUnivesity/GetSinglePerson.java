@@ -14,7 +14,7 @@
  *  limitations under the License.
  */
 
-package de.fhws.fiw.fds.suttondemo.server.api.states.persons;
+package de.fhws.fiw.fds.suttondemo.server.api.states.PartnerUnivesity;
 
 import de.fhws.fiw.fds.sutton.server.api.caching.CachingUtils;
 import de.fhws.fiw.fds.sutton.server.api.caching.EtagGenerator;
@@ -24,8 +24,8 @@ import de.fhws.fiw.fds.sutton.server.api.states.get.AbstractGetState;
 import de.fhws.fiw.fds.sutton.server.database.results.SingleModelResult;
 import de.fhws.fiw.fds.sutton.server.models.AbstractModel;
 import de.fhws.fiw.fds.suttondemo.server.api.models.Person;
-import de.fhws.fiw.fds.suttondemo.server.api.states.person_locations.PersonLocationRelTypes;
-import de.fhws.fiw.fds.suttondemo.server.api.states.person_locations.PersonLocationUri;
+import de.fhws.fiw.fds.suttondemo.server.api.states.PartnerUniversityModules.PersonLocationRelTypes;
+import de.fhws.fiw.fds.suttondemo.server.api.states.PartnerUniversityModules.PersonLocationUri;
 import de.fhws.fiw.fds.suttondemo.server.database.DaoFactory;
 import jakarta.ws.rs.core.Response;
 

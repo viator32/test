@@ -1,4 +1,4 @@
-package de.fhws.fiw.fds.suttondemo.server.api.states.locations;
+package de.fhws.fiw.fds.suttondemo.server.api.states.Modules;
 
 import de.fhws.fiw.fds.sutton.server.api.queries.AbstractQuery;
 import de.fhws.fiw.fds.sutton.server.api.services.ServiceContext;

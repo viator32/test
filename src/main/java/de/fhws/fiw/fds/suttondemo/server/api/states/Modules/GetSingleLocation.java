@@ -1,4 +1,4 @@
-package de.fhws.fiw.fds.suttondemo.server.api.states.locations;
+package de.fhws.fiw.fds.suttondemo.server.api.states.Modules;
 
 import de.fhws.fiw.fds.sutton.server.api.caching.CachingUtils;
 import de.fhws.fiw.fds.sutton.server.api.caching.EtagGenerator;
@@ -7,7 +7,6 @@ import de.fhws.fiw.fds.sutton.server.api.states.get.AbstractGetState;
 import de.fhws.fiw.fds.sutton.server.database.results.SingleModelResult;
 import de.fhws.fiw.fds.sutton.server.models.AbstractModel;
 import de.fhws.fiw.fds.suttondemo.server.api.models.Location;
-import de.fhws.fiw.fds.suttondemo.server.api.states.persons.PersonUri;
 import de.fhws.fiw.fds.suttondemo.server.database.DaoFactory;
 import jakarta.ws.rs.core.Response;
 

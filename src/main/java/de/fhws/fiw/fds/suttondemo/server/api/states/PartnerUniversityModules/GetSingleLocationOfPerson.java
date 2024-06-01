@@ -1,4 +1,4 @@
-package de.fhws.fiw.fds.suttondemo.server.api.states.person_locations;
+package de.fhws.fiw.fds.suttondemo.server.api.states.PartnerUniversityModules;
 
 import de.fhws.fiw.fds.sutton.server.api.caching.CachingUtils;
 import de.fhws.fiw.fds.sutton.server.api.caching.EtagGenerator;
