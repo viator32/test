@@ -1,22 +1,9 @@
-/*
- * Copyright 2019 University of Applied Sciences Würzburg-Schweinfurt, Germany
- *
- * Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except
- * in compliance with the License. You may obtain a copy of the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software distributed under the License
- * is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express
- * or implied. See the License for the specific language governing permissions and limitations under
- * the License.
- */
-
 package de.fhws.fiw.fds.sutton.server.database;
 
 /**
  * The SearchParameter class provides the required attributes to apply the paging behavior using offset and size.
- * It could also be used to define sorting criteria to sort the results that were read from the database
+ * It could also be used to define sorting criteria to sort the results that were read from the database,
+ * and filtering criteria to narrow down the search results.
  */
 public class SearchParameter {
 
@@ -36,6 +23,16 @@ public class SearchParameter {
      * The sorting criterion {@link String} to be used to sort the results from the database
      */
     private String orderByAttribute = "";
+
+    /**
+     * Additional filtering criteria
+     */
+    private String universityName = null;
+    private String country = null;
+    private String moduleName = null;
+    private Integer semester = null;
+
+    // Getters and Setters
 
     public int getOffset() {
         return this.offset;
@@ -61,4 +58,39 @@ public class SearchParameter {
         this.orderByAttribute = orderByAttribute;
     }
 
+    public String getUniversityName() {
+        return universityName;
+    }
+
+    public void setUniversityName(String universityName) {
+        this.universityName = universityName;
+    }
+
+    public String getCountry() {
+        return country;
+    }
+
+    public void setCountry(String country) {
+        this.country = country;
+    }
+
+    public String getModuleName() {
+        return moduleName;
+    }
+
+    public void setModuleName(String moduleName) {
+        this.moduleName = moduleName;
+    }
+
+    public Integer getSemester() {
+        return semester;
+    }
+
+    public void setSemester(Integer semester) {
+        this.semester = semester;
+    }
+
+    public boolean isAscending() {
+        return true; // Assuming ascending order by default
+    }
 }

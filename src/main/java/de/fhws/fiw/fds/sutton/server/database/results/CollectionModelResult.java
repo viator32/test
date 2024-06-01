@@ -31,7 +31,7 @@ import java.util.LinkedList;
 public class CollectionModelResult<T extends AbstractModel> extends AbstractResult {
 
     /**
-     * a collection of the found resources, that descend from {@link AbstractModel} in the database
+     * A collection of the found resources, that descend from {@link AbstractModel} in the database
      */
     protected Collection<T> result;
 
@@ -40,14 +40,14 @@ public class CollectionModelResult<T extends AbstractModel> extends AbstractResu
      * between the total number of the found results and the number of results sent in a single response
      * while applying pagination
      */
-    protected int totalNumberOfResult;
+    protected int totalNumberOfResults;
 
     /**
      * Empty Constructor, which indicates that no results were found in the database
      */
     public CollectionModelResult() {
         this.result = new LinkedList<>();
-        this.totalNumberOfResult = 0;
+        this.totalNumberOfResults = 0;
     }
 
     /**
@@ -56,7 +56,7 @@ public class CollectionModelResult<T extends AbstractModel> extends AbstractResu
      */
     public CollectionModelResult(final Collection<T> result) {
         this.result = result != null ? result : new LinkedList<>();
-        this.totalNumberOfResult = this.result.size();
+        this.totalNumberOfResults = this.result.size();
     }
 
     @Override
@@ -68,12 +68,20 @@ public class CollectionModelResult<T extends AbstractModel> extends AbstractResu
         return this.result;
     }
 
-    public int getTotalNumberOfResult() {
-        return this.totalNumberOfResult;
+    public int getTotalNumberOfResults() {
+        return this.totalNumberOfResults;
     }
 
-    public void setTotalNumberOfResult(final int totalNumberOfResult) {
-        this.totalNumberOfResult = totalNumberOfResult;
+    public void setTotalNumberOfResults(final int totalNumberOfResults) {
+        this.totalNumberOfResults = totalNumberOfResults;
     }
 
+    public void setResult(final Collection<T> result) {
+        this.result = result != null ? result : new LinkedList<>();
+        this.totalNumberOfResults = this.result.size();
+    }
+
+    public void setTotalCount(int size) {
+        this.totalNumberOfResults = size;
+    }
 }
