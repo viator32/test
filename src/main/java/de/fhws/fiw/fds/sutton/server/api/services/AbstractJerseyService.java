@@ -16,25 +16,29 @@
 
 package de.fhws.fiw.fds.sutton.server.api.services;
 
-
 import de.fhws.fiw.fds.sutton.server.api.serviceAdapters.ServletRequestAdapter.JerseyServletRequest;
 import de.fhws.fiw.fds.sutton.server.api.serviceAdapters.requestAdapter.JerseyRequest;
 import de.fhws.fiw.fds.sutton.server.api.serviceAdapters.uriInfoAdapter.JerseyUriInfoAdapter;
 import jakarta.annotation.PostConstruct;
 import jakarta.inject.Inject;
 import jakarta.servlet.http.HttpServletRequest;
+import jakarta.ws.rs.core.Context;
 import jakarta.ws.rs.core.Request;
+import jakarta.ws.rs.core.SecurityContext;
 import jakarta.ws.rs.core.UriInfo;
 
 public abstract class AbstractJerseyService {
 
-    @Inject
+    @Context
+    protected SecurityContext securityContext;
+
+    @Context
     protected UriInfo uriInfo;
 
-    @Inject
+    @Context
     protected Request request;
 
-    @Inject
+    @Context
     protected HttpServletRequest httpServletRequest;
 
     protected ServiceContext serviceContext;

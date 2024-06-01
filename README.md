@@ -75,7 +75,31 @@ use class `DaoFactory` to decide which implementation (in-memory storage or Hibe
 Execute method `main` in class `Start`. This will start the embedded Tomcat server and deploy the demo application. The demo application
 is available at `http://localhost:8080/demo/api`.
 
-### Use Docker
+### Endpoints for Partner University CRUD Operations:
+
+GET `/partnerUniversities:` Fetch all partner universities.
+GET `/partnerUniversities/{id}:` Fetch a single partner university by ID.
+POST `/partnerUniversities:` Create a new partner university.
+PUT `/partnerUniversities/{id}:` Update an existing partner university by ID.
+DELETE `/partnerUniversities/{id}:` Delete a partner university by ID.
+
+### Endpoints for Module CRUD Operations:
+
+GET `/partnerUniversities/{universityId}/modules`: Fetch all modules for a specific university.
+GET `/partnerUniversities/{universityId}/modules/{moduleId}`: Fetch a single module by ID for a specific university.
+POST `/partnerUniversities/{universityId}/modules`: Create a new module for a specific university.
+PUT `/partnerUniversities/{universityId}/modules/{moduleId}`: Update an existing module by ID for a specific university.
+DELETE `/partnerUniversities/{universityId}/modules/{moduleId}`: Delete a module by ID for a specific university.
+
+GET `/modules`: Fetch all modules, optionally filtered by moduleName.
+GET `/modules/{id}`: Fetch a single module by ID.
+POST `/modules`: Create a new module.
+PUT `/modules/{id}`: Update an existing module by ID.
+DELETE `/modules/{id}`: Delete a module by ID.
+
+Exception Handling: Each method handles SuttonWebAppException by throwing a `WebApplicationException` with an appropriate response status and message.
+
+## Use Docker
 
 ### For manual testing 
 
